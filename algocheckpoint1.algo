@@ -1,0 +1,14 @@
+ALGORITHM srt
+VAR
+    arr : ARRAY_OF type[5]:=[12, 11, 13, 5, 6];
+BEGIN
+   FOR i FROM 1 TO 5 DO
+    key= arr[i]
+    j=i-1
+    WHILE (j>=0) and arr[i]<arr[j] DO
+       arr[j+1]= arr[j]
+       j-=1
+       arr[j+1]=key
+    END_WHILE
+   END_FOR
+END
